@@ -6,9 +6,12 @@ import pandas as pd
 import copy
 from figures import plots
 import numpy as np
+from datetime import datetime
 
 
 df:             pd.DataFrame    = pd.read_csv("./Open_Parking_and_Camera_Violations.csv")
+dates:    list            = [list(date)[:10] for date in df['Issue Date']]
+print(dates)
 options:        list            = list (df.columns)
 
 colors:         list            = ["#00FF98", "#00E1FF", "#4600CF", "#C8FF00", "#0021FF", "#E600FF", "#FF002E", "#FFF300", "#37FF00", "#00FFFA"]
